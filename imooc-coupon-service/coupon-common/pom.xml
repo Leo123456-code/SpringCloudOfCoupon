@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>imooc-coupon-service</artifactId>
+        <groupId>com.imooc.coupon</groupId>
+        <version>1.0-SNAPSHO</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.imooc.coupon</groupId>
+    <artifactId>coupon-common</artifactId>
+    <version>1.0-SNAPSHO</version>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+         <!--json 处理工具 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.31</version>
+        </dependency>
+         <!-- commons工具类  -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>4.0</version>
+        </dependency>
+         <!-- commons工具类  -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.3</version>
+        </dependency>
+
+        <!-- Java Persistence API, ORM 规范 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <!-- MySQL 驱动, 注意, 这个需要与 MySQL 版本对应 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.12</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>20.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+
+    </dependencies>
+
+<!--  逆向工程专用-->
+<!--    <dependencies>-->
+
+<!--        &lt;!&ndash; SpringBoot start &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-web</artifactId>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; Mybatis &ndash;&gt;-->
+<!--        &lt;!&ndash;mapper &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>tk.mybatis</groupId>-->
+<!--            <artifactId>mapper-spring-boot-starter</artifactId>-->
+<!--            <version>1.1.7</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.projectlombok</groupId>-->
+<!--            <artifactId>lombok</artifactId>-->
+<!--            <optional>true</optional>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; mysql &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>mysql</groupId>-->
+<!--            <artifactId>mysql-connector-java</artifactId>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; druid &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba</groupId>-->
+<!--            <artifactId>druid-spring-boot-starter</artifactId>-->
+<!--            <version>1.1.20</version>-->
+<!--        </dependency>-->
+
+
+<!--    </dependencies>-->
+
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.mybatis.generator</groupId>-->
+<!--                <artifactId>mybatis-generator-maven-plugin</artifactId>-->
+<!--                <version>1.3.2</version>-->
+<!--                <configuration>-->
+<!--                    <configurationFile>${basedir}/src/main/resources/generator/generatorConfig.xml</configurationFile>-->
+<!--                    <overwrite>true</overwrite>-->
+<!--                    <verbose>true</verbose>-->
+<!--                </configuration>-->
+<!--                <dependencies>-->
+<!--                    <dependency>-->
+<!--                        <groupId>mysql</groupId>-->
+<!--                        <artifactId>mysql-connector-java</artifactId>-->
+<!--                        <version>5.1.46</version>-->
+<!--                    </dependency>-->
+<!--                    <dependency>-->
+<!--                        <groupId>tk.mybatis</groupId>-->
+<!--                        <artifactId>mapper</artifactId>-->
+<!--                        <version>3.4.0</version>-->
+<!--                    </dependency>-->
+<!--                </dependencies>-->
+<!--            </plugin>-->
+
+<!--        </plugins>-->
+<!--    </build>-->
+
+
+
+</project>

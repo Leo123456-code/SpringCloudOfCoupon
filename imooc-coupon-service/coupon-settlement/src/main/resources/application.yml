@@ -1,0 +1,23 @@
+server:
+  port: 7003
+  servlet:
+    context-path: /coupon-settlement
+
+spring:
+  application:
+    name: eureka-client-coupon-settlement
+
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/imooc_coupon_data?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+
+logging:
+  level:
+    com.imooc.coupon: debug

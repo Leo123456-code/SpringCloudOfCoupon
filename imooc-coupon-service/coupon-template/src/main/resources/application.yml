@@ -1,0 +1,46 @@
+#coupon-template
+server:
+  port: 7001
+  servlet:
+    context-path: /coupon-template
+#服务名称
+spring:
+  application:
+    name: eureka-client-coupon-template
+
+#redis
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    timeout: 10000
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate.show_sql: true
+      hibernate.format_sql: true
+    open-in-view: false
+
+
+
+#mysql datasourse
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/imooc_coupon_data?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#eureka 注册
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+#日志
+logging:
+  level:
+    com.imooc.coupon: debug
+
+

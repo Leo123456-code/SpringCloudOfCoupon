@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <!-- 启动命令 RunAs Maven Build... mybatis-generator:generate -->
+
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.example.spring.util.SSCMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/imooc_coupon_data?characterEncoding=utf-8"
+                        userId="root"
+                        password="root">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.example.spring.pojo" targetProject="src/main/java"/>
+
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+        <javaClientGenerator targetPackage="com.example.spring.dao" targetProject="src/main/java"
+                             type="XMLMAPPER"/>
+
+        <!--        <table tableName="mall_category" ></table>-->
+        <table tableName="coupon" domainObjectName="Coupon" enableCountByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false"/>
+        <table tableName="coupon_template" domainObjectName="CouponTemplate" enableCountByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false"/>
+        <!-- 相关表的配置 -->
+        <!--图片类型的会另生成一张表，需要加columnOverride column="sub_images" jdbcType="VARCHAR"-->
+        <!-- <table tableName="mall_product" domainObjectName="Product" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+             <columnOverride column="detail" jdbcType="VARCHAR" ></columnOverride>
+             <columnOverride column="sub_images" jdbcType="VARCHAR" ></columnOverride>
+         </table>-->
+
+    </context>
+
+</generatorConfiguration>

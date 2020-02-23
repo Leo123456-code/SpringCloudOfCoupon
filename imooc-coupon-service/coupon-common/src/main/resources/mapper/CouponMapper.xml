@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.spring.dao.CouponMapper" >
+  <resultMap id="BaseResultMap" type="com.example.spring.pojo.Coupon" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="template_id" property="templateId" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="BIGINT" />
+    <result column="coupon_code" property="couponCode" jdbcType="VARCHAR" />
+    <result column="assign_time" property="assignTime" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>
